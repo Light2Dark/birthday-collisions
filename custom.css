@@ -28,8 +28,10 @@
 }
 
 /* Slide branding: logo pinned to the top-right of every slide.
- * Swap the image by replacing public/logo.png and updating the url below
- * to "/public/logo.png" (or keep using marimo's built-in "/logo.png").
+ * Use a relative path so GitHub project Pages
+ * (…/birthday-collisions/) resolves correctly; absolute "/logo.png"
+ * would request github.io/logo.png and 404.
+ * Swap the image by replacing public/logo.png.
  */
 .reveal-viewport::after {
     content: "";
@@ -38,7 +40,7 @@
     right: 1.5rem;
     width: 7.5rem;
     height: 2.5rem;
-    background-image: url("/logo.png");
+    background-image: url("./logo.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
