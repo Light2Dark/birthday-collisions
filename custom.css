@@ -28,9 +28,7 @@
 }
 
 /* Slide branding: logo pinned to the top-right of every slide.
- * Use a relative path so GitHub project Pages
- * (…/birthday-collisions/) resolves correctly; absolute "/logo.png"
- * would request github.io/logo.png and 404.
+ * Use a relative path so GitHub project Pages resolves correctly
  * Swap the image by replacing public/logo.png.
  */
 .reveal-viewport::after {
