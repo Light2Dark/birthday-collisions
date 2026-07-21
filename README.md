@@ -4,8 +4,6 @@ An interactive marimo notebook about the birthday paradox.
 
 ## Live app
 
-After GitHub Pages is deployed:
-
 **https://light2dark.github.io/birthday-collisions/**
 
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/Light2Dark/birthday-collisions/blob/main/custom.py/wasm)
