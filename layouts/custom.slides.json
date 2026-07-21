@@ -1,0 +1,38 @@
+{
+  "type": "slides",
+  "data": {
+    "cells": [
+      {},
+      {},
+      {},
+      {
+        "type": "fragment"
+      },
+      {
+        "type": "fragment"
+      },
+      {
+        "type": "fragment"
+      },
+      {},
+      {
+        "speakerNotes": "It's a common fallacy to focus on one individual rather than the collective."
+      },
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "type": "fragment"
+      },
+      {},
+      {},
+      {
+        "type": "sub-slide"
+      },
+      {}
+    ],
+    "deck": {}
+  }
+}
