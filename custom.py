@@ -2,7 +2,7 @@
 # requires-python = ">=3.14"
 # dependencies = [
 #     "altair==6.2.2",
-#     "marimo>=0.23.14",
+#     "marimo>=0.23.15",
 #     "numpy==2.5.1",
 #     "pandas==3.0.3",
 # ]
@@ -10,7 +10,7 @@
 
 import marimo
 
-__generated_with = "0.23.14"
+__generated_with = "0.23.15"
 app = marimo.App(
     width="medium",
     layout_file="layouts/custom.slides.json",

@@ -17,7 +17,7 @@ uvx marimo edit custom.py
 ## Export (html-wasm, run mode, show code)
 
 ```bash
-uvx --from 'marimo>=0.23.14' marimo export html-wasm custom.py \
+uvx --from 'marimo>=0.23.15' marimo export html-wasm custom.py \
   -o _site \
   --mode run \
   --show-code \
