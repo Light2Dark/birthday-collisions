@@ -52,20 +52,6 @@
     padding-top: 0.5rem;
 }
 
-/* --------------------------------------------------------------------------
- * Per-slide styling
- *
- * Two useful hooks:
- *  1. Slide position (best for presentation):
- *       .reveal .slides > section:first-of-type { ... }
- *       .reveal .slides > section:nth-of-type(3) { ... }
- *  2. Named cell (best when code is visible / in the editor):
- *       [data-cell-name='title'] { ... }
- *     Name a cell in the notebook UI (or via code_mode) to use this.
- * -------------------------------------------------------------------------- */
-
-/* Title slide — first horizontal slide (cell named "title") */
-.reveal .slides>section:first-of-type h1,
 [data-cell-name="title"] h1 {
     font-size: 3.4rem;
     font-weight: 800;
@@ -74,7 +60,6 @@
     color: #1c1917;
 }
 
-.reveal .slides>section:first-of-type h3,
 [data-cell-name="title"] h3 {
     font-size: 1.55rem;
     font-weight: 600;
@@ -83,48 +68,39 @@
     margin-top: 1rem;
 }
 
-.reveal .slides>section:first-of-type strong,
 [data-cell-name="title"] strong {
     font-weight: 800;
     color: #0c0a09;
 }
 
-/* Takeaways slide — last horizontal slide (cell named "takeaways")
- * Full-bleed ink wash on the viewport (not just the inset slide box).
- * Reveal keeps slide sections letterboxed; painting only the <section>
- * leaves the paper margins showing — that was accidental, not intentional.
- */
-.reveal-viewport:has(.slides > section:last-of-type.present),
-.reveal-viewport:fullscreen:has(.slides > section:last-of-type.present) {
+/* Paint the viewport for a full-bleed named slide. */
+.reveal-viewport:has(.slides > section.present [data-cell-name="takeaways"]) {
     background:
         radial-gradient(ellipse 80% 60% at 15% 20%, rgba(255, 196, 120, 0.22), transparent 55%),
         radial-gradient(ellipse 70% 50% at 90% 80%, rgba(94, 234, 212, 0.16), transparent 50%),
         linear-gradient(145deg, #1c1917 0%, #292524 45%, #1f2937 100%);
 }
 
-.reveal-viewport:has(.slides > section:last-of-type.present)::before {
+.reveal-viewport:has(.slides > section.present [data-cell-name="takeaways"])::before {
     opacity: 0.12;
     /* keep a whisper of the doodles on the dark wash */
 }
 
-.reveal-viewport:has(.slides > section:last-of-type.present)::after {
+.reveal-viewport:has(.slides > section.present [data-cell-name="takeaways"])::after {
     filter: brightness(0) invert(1);
     /* logo readable on dark */
     opacity: 0.9;
 }
 
-.reveal .slides>section:last-of-type,
-.reveal .backgrounds>.slide-background:last-child {
+.reveal .slides>section:has([data-cell-name="takeaways"]) {
     background: transparent;
 }
 
-.reveal .slides>section:last-of-type .mo-slide-content,
 [data-cell-name="takeaways"] [data-cell-role="output"] {
     padding: 1.5rem 1.75rem;
     color: #fafaf9;
 }
 
-.reveal .slides>section:last-of-type h2,
 [data-cell-name="takeaways"] h2 {
     font-weight: 800;
     font-size: 2.4rem;
@@ -132,19 +108,16 @@
     color: #fffbeb;
 }
 
-.reveal .slides>section:last-of-type li,
 [data-cell-name="takeaways"] li {
     font-weight: 500;
     color: #e7e5e4;
 }
 
-.reveal .slides>section:last-of-type strong,
 [data-cell-name="takeaways"] strong {
     font-weight: 800;
     color: #fde68a;
 }
 
-.reveal .slides>section:last-of-type .katex,
 [data-cell-name="takeaways"] .katex {
     color: #fef3c7;
 }
